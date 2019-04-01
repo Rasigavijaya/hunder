@@ -22,6 +22,16 @@ int main()
         }
     }
     b[k]='\0';
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(b[i]==b[j] )
+            {
+                b[j]='*';
+            }
+        }
+    }
     for(i=k;b[i]!='\0';i++)
     {
         for(j=i+1;b[j]!='\0';j++)
@@ -37,7 +47,10 @@ int main()
     b[i]='\0';
     for(i=0;b[i]!='\0';i++)
     {
+        if(b[i]!='*')
+        {
         printf("%d ",b[i]);
+        }
     }
     return 0;
 }
